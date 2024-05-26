@@ -5,6 +5,7 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/global.css" />
+        <link rel="stylesheet" href="/media.css" />
         <title>Css and HTML Task one</title>
     </head>
     <body>
@@ -13,7 +14,7 @@
                 <div class="navbar__logo">
                     <div class="logo__container">
                         <img class="logo" src="/Images/Icons/mainLogo.svg" alt="Main Logo">
-                        <img src="/Images/Icons/logo.svg" alt="logo">
+                        <img class="logo__name" src="/Images/Icons/logo.svg" alt="logo">
                     </div>
                     <ul class="nav__links">
                         <li class="active">
@@ -32,10 +33,10 @@
                         <span>
                             <img src="/Images/Icons/user.svg" alt="user">
                         </span>
-                        <span>
+                        <span class="screen__saver">
                             Olakunle Te...
                         </span>
-                        <span>
+                        <span class="screen__saver">
                             <img src="/Images/Icons/right.svg" alt="arrow">
                         </span>
                     </div>
@@ -45,95 +46,300 @@
                         </span>
                     </div>
                     <div class="flex center">
-                        <img src="/Images/Icons/logout.svg" alt="logout">
+                        <img id="menu__button" class="menu" src="/Images/Icons/BreadCrumbs.svg" alt="menu">
+                        <img class="logout" src="/Images/Icons/logout.svg" alt="logout">
                     </div>
                 </div>
             </nav>
+            <div id="breadcrumbs" class="breadcrumbs__menu">
+                <div class="flex">
+                    <img id="close" width="24" height="24" src="https://img.icons8.com/material-rounded/24/DBFFFF/delete-sign.png" alt="delete-sign"/>
+                </div>
+                <a href="#" class="breadcrumbs__menu--links">
+                    Exchange
+                </a>
+                <a href="#" class="breadcrumbs__menu--links active">
+                    Wallets
+                </a>
+                <a href="#" class="breadcrumbs__menu--links">
+                    Roqqu Hub
+                </a>
+                <a href="#" class="breadcrumbs__menu--links">
+                    Log out
+                </a>
+            </div>
         </header>
         <main class="main">
             <section class="coin__header flex">
-                <div class="flex center space-between space__sm ">
-                    <span>
-                        <img src="Images/Icons/coin.svg" alt="coin">
-                    </span>
-                    <span>
-                        <span class="coin__size">BTC/USDT</span>
-                    </span>
-                    <span>
+                <div class="expo">
+                    <div class="relative toggle__coins flex center space-between space__sm ">
                         <span>
-                            <img src="/Images/Icons/drop_down.svg" alt="drop-down">
+                            <img class="coin__header--img" src="Images/Icons/coin.svg" alt="coin">
                         </span>
-                    </span>
+                        <span>
+                            <span class="coin__size">BTC/USDT</span>
+                        </span>
+                        <span>
+                            <span>
+                                <img class="toggle__coin--arrow" src="/Images/Icons/drop_down.svg" alt="drop-down">
+                            </span>
+                        </span>
+                        <div class="coin__header--dropdown">
+                            <div>
+                                Select Market
+                            </div>
+                            <div class="search__container">
+                                <span>
+                                    <img src="/Images/Icons/search.svg" alt="search">
+                                </span>
+                                <input type="text" placeholder="search">
+                            </div>
+                            <div>
+                                <div class="coin__display">
+                                    <div class="coin__display--header">
+                                        <span class="active font_12">
+                                            All
+                                        </span>
+                                        <span class="font_12 muted">
+                                            USD
+                                        </span>
+                                        <span class="font_12 muted">
+                                            BTC
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list__coins">
+                                <div>
+                                    <div class="coin__display">
+                                        <div class="coin__display--data1">
+                                            <span>
+                                                <img src="/Images/Icons/coins.svg" alt="coin">
+                                            </span>
+                                            <span class="muted font_12">
+                                                BTC - USDT
+                                            </span>
+                                        </div>
+                                        <div class="coin__display--data">
+                                            <span class="font_12">
+                                                $23,234.6
+                                            </span>
+                                            <span class="green font_12">
+                                                +0.005%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin__display">
+                                        <div class="coin__display--data1">
+                                            <span>
+                                                <img src="/Images/Icons/coins.svg" alt="coin">
+                                            </span>
+                                            <span class="muted font_12">
+                                                BTC - USDT
+                                            </span>
+                                        </div>
+                                        <div class="coin__display--data">
+                                            <span class="font_12">
+                                                $23,234.6
+                                            </span>
+                                            <span class="green font_12">
+                                                +0.005%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin__display">
+                                        <div class="coin__display--data1">
+                                            <span>
+                                                <img src="/Images/Icons/coins.svg" alt="coin">
+                                            </span>
+                                            <span class="muted font_12">
+                                                BTC - USDT
+                                            </span>
+                                        </div>
+                                        <div class="coin__display--data">
+                                            <span class="font_12">
+                                                $23,234.6
+                                            </span>
+                                            <span class="green font_12">
+                                                +0.005%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin__display">
+                                        <div class="coin__display--data1">
+                                            <span>
+                                                <img src="/Images/Icons/coins.svg" alt="coin">
+                                            </span>
+                                            <span class="muted font_12">
+                                                BTC - USDT
+                                            </span>
+                                        </div>
+                                        <div class="coin__display--data">
+                                            <span class="font_12">
+                                                $23,234.6
+                                            </span>
+                                            <span class="green font_12">
+                                                +0.005%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin__display">
+                                        <div class="coin__display--data1">
+                                            <span>
+                                                <img src="/Images/Icons/coins.svg" alt="coin">
+                                            </span>
+                                            <span class="muted font_12">
+                                                BTC - USDT
+                                            </span>
+                                        </div>
+                                        <div class="coin__display--data">
+                                            <span class="font_12">
+                                                $23,234.6
+                                            </span>
+                                            <span class="green font_12">
+                                                +0.005%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin__display">
+                                        <div class="coin__display--data1">
+                                            <span>
+                                                <img src="/Images/Icons/coins.svg" alt="coin">
+                                            </span>
+                                            <span class="muted font_12">
+                                                BTC - USDT
+                                            </span>
+                                        </div>
+                                        <div class="coin__display--data">
+                                            <span class="font_12">
+                                                $23,234.6
+                                            </span>
+                                            <span class="green font_12">
+                                                +0.005%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="coin__info flex ">
-                    <div class="space__md border__right flex center">
-                        <span>
-                            <span class="coin__info--price green">
-                                $20,634
-                            </span>
-                        </span>
-                    </div>
-                    <div class="space__md border__right">
-                        <span>
+                <div class="expo">
+                    <div class="coin__info flex ">
+                        <div class=" space__md border__right flex center">
                             <span>
-                                <span class="muted">
-                                    <img src="/Images/Icons/time.svg" alt="time"> 
-                                    24h change
-                                </span>
-                                <span class="green">
-                                    520.80 +1.25%
+                                <span class="coin__info--price green">
+                                    $20,634
                                 </span>
                             </span>
-                        </span>
+                            
+                        </div>
                     </div>
-                    <div class="space__md border__right">
-                        <span>
+                </div>
+                <div class="overflow__coins">
+                    <div class="coin__info flex expos">
+                        <div class="space__md border__right">
                             <span>
-                                <span class="muted">
-                                    <img src="/Images/Icons/arrow-top.svg" alt="time"> 
-                                    24h high
-                                </span>
                                 <span>
-                                    520.80 +1.25%
+                                    <span class="muted">
+                                        <img src="/Images/Icons/time.svg" alt="time"> 
+                                        24h change
+                                    </span>
+                                    <span class="green">
+                                        520.80 +1.25%
+                                    </span>
                                 </span>
                             </span>
-                        </span>
-                    </div>
-                    <div class="space__md border__right">
-                        <span>
+                        </div>
+                        <div class="space__md border__right">
                             <span>
-                                <span class="muted">
-                                    <img src="/Images/Icons/arrow-down.svg" alt="time"> 
-                                    24h low
-                                </span>
                                 <span>
-                                    520.80 +1.25%
+                                    <span class="muted">
+                                        <img src="/Images/Icons/arrow-top.svg" alt="time"> 
+                                        24h high
+                                    </span>
+                                    <span>
+                                        520.80 +1.25%
+                                    </span>
                                 </span>
                             </span>
-                        </span>
-                    </div>
-                    <div class="space__md">
-                        <span>
+                        </div>
+                        <div class="space__md border__right">
                             <span>
-                                <span class="muted">
-                                    <img src="/Images/Icons/chart.svg" alt="time"> 
-                                    24h volume
-                                </span>
                                 <span>
-                                    75.655.26
+                                    <span class="muted">
+                                        <img src="/Images/Icons/arrow-down.svg" alt="time"> 
+                                        24h low
+                                    </span>
+                                    <span>
+                                        520.80 +1.25%
+                                    </span>
                                 </span>
                             </span>
-                        </span>
+                        </div>
+                        <div class="space__md">
+                            <span>
+                                <span>
+                                    <span class="muted">
+                                        <img src="/Images/Icons/chart.svg" alt="time"> 
+                                        24h volume
+                                    </span>
+                                    <span>
+                                        75.655.26
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="chart">
                 <div class="chart__container">
                     <div class="chart__content">
-                        <div class="chart__content--view">
-                            Chart in here 
+                        <div class="data__header sm">
+                            <span class="active">
+                                Charts
+                            </span>
+                            <span>
+                                Order book
+                            </span>
+                            <span>
+                                Recent trades
+                            </span>
                         </div>
-                        <div class="chart__content--data">
+                        <!-- Chart -->
+                        <div class="chart__content--view">
+                            <div class="tradingview-widget-container" style="height:100%;width:100%">
+                                <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                {
+                                "autosize": true,
+                                "symbol": "BINANCE:BTCUSDT",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "range": "YTD",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                                </script>
+                            </div>
+                        </div>
+                        
+                        <!-- Order book and recent trades section -->
+                        <div class="chart__content--data hidden">
                             <div class="data__header">
                                 <span class="active">
                                     Order Book
@@ -320,6 +526,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Order section -->
                     <div class="open__orders">
                         <div class="open__orders--header">
                             <span class="active border__right">
@@ -347,107 +555,115 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div class="buy__sell">
-                        <div class="buy__sell--header">
-                            <span class="active">
-                                Buy
-                            </span>
-                            <span>
-                                Sell
-                            </span>
-                        </div>
-                        <div class="buy__sell--toggle flex center">
-                            <span class="muted active">
-                                Limit
-                            </span>
+                <!-- Buy sell section -->
+                <div class="buy__sell hidden">
+                    <div class="buy__sell--header">
+                        <span id="buy__id" class="active right pointer">
+                            Buy
+                        </span>
+                        <span id="sell_id" class="left pointer">
+                            Sell
+                        </span>
+                    </div>
+                    <div class="buy__sell--toggle flex center">
+                        <span id="limit" class="pointer muted active">
+                            Limit
+                        </span>
+                        <span id="market" class="pointer muted">
+                            Market
+                        </span>
+                        <span id="stop" class="pointer muted right">
+                            Stop Limit
+                        </span>
+                    </div>
+                    <div id="trigger__cover" class="buy__sell--input-section d_none">
+                        <span class="muted">
+                            Trigger Price 
+                            <img src="/Images/Icons/warning.svg" alt="i">
+                        </span>
+                        <input type="number" placeholder="0.00 USD">
+                    </div>
+                    <div id="limit__cover" class="buy__sell--input-section">
+                        <span class="muted">
+                            Limit Price 
+                            <img src="/Images/Icons/warning.svg" alt="i">
+                        </span>
+                        <input type="number" placeholder="0.00 USD">
+                    </div>
+                    <div id="limit__amount" class="buy__sell--input-section">
+                        <span class="muted">
+                            Amount
+                            <img src="/Images/Icons/warning.svg" alt="i">
+                        </span>
+                        <input type="number" placeholder="0.00 USD">
+                    </div>
+                    <div id="limit__type" class="buy__sell--input-section">
+                        <span class="muted">
+                            Type 
+                            <img src="/Images/Icons/warning.svg" alt="i">
+                        </span>
+                        <select name="type" id="type">
+                            <option value="Good">Good till cancelled</option>
+                            <option value="Kill">Fill or kill</option>
+                            <option value="Date">Good till date</option>
+                        </select>
+                    </div>
+                    <div class="buy__sell--post--only">
+                        <span>
+                            <input type="checkbox" name="post" id="post">
+                        </span>
+                        <span class="muted">
+                            <span class="px-05">Post Only</span>
+                            <img src="/Images/Icons/warning.svg" alt="i">
+                        </span>
+                    </div>
+                    <div class="buy__sell--total">
+                        <span class="muted">
+                            Total
+                        </span>
+                        <span class="muted">
+                            0.00
+                        </span>
+                    </div>
+                    <div class="buy__sell--button">
+                        <button class="buy__sell--buy-button">
+                            Buy BTC
+                        </button>
+                    </div>
+                    <div class="buy__sell--total-account-value">
+                        <span class="muted">
+                            Total account value
+                        </span>
+                        <select name="money_value" id="money_value">
+                            <option value="ngn">NGN</option>
+                            <option value="usd">USD</option>
+                        </select>
+                    </div>
+                    <div>
+                        0.00
+                    </div>
+                    <div class="buy__sell--total-account-value">
+                        <div>
                             <span class="muted">
-                                Market
+                                Open Orders
                             </span>
-                            <span class="muted right">
-                                Stop Limit
-                            </span>
-                        </div>
-                        <div class="buy__sell--input-section">
-                            <span class="muted">
-                                Limit Price 
-                                <img src="/Images/Icons/warning.svg" alt="i">
-                            </span>
-                            <input type="number" placeholder="0.00 USD">
-                        </div>
-                        <div class="buy__sell--input-section">
-                            <span class="muted">
-                                Amount
-                                <img src="/Images/Icons/warning.svg" alt="i">
-                            </span>
-                            <input type="number" placeholder="0.00 USD">
-                        </div>
-                        <div class="buy__sell--input-section">
-                            <span class="muted">
-                                Type 
-                                <img src="/Images/Icons/warning.svg" alt="i">
-                            </span>
-                            <select name="type" id="type">
-                                <option value="Good">Good till cancelled</option>
-                            </select>
-                        </div>
-                        <div class="buy__sell--post--only">
-                            <span>
-                                <input type="checkbox" name="post" id="post">
-                            </span>
-                            <span class="muted">
-                                <span class="px-05">Post Only</span>
-                                <img src="/Images/Icons/warning.svg" alt="i">
-                            </span>
-                        </div>
-                        <div class="buy__sell--total">
-                            <span class="muted">
-                                Total
-                            </span>
-                            <span class="muted">
-                                0.00
-                            </span>
-                        </div>
-                        <div class="buy__sell--button">
-                            <button class="buy__sell--buy-button">
-                                Buy BTC
-                            </button>
-                        </div>
-                        <div class="buy__sell--total-account-value">
-                            <span class="muted">
-                                Total account value
-                            </span>
-                            <select name="money_value" id="money_value">
-                                <option value="ngn">NGN</option>
-                                <option value="usd">USD</option>
-                            </select>
+                            <div>
+                                00
+                            </div>
                         </div>
                         <div>
-                            0.00
-                        </div>
-                        <div class="buy__sell--total-account-value">
+                            <span class="muted">
+                                Open Orders
+                            </span>
                             <div>
-                                <span class="muted">
-                                    Open Orders
-                                </span>
-                                <div>
-                                    00
-                                </div>
-                            </div>
-                            <div>
-                                <span class="muted">
-                                    Open Orders
-                                </span>
-                                <div>
-                                    00
-                                </div>
+                                00
                             </div>
                         </div>
-                        <div class="buy__sell--deposit">
-                            <button>
-                                Deposit
-                            </button>
-                        </div>
+                    </div>
+                    <div class="buy__sell--deposit">
+                        <button>
+                            Deposit
+                        </button>
                     </div>
                 </div>
             </section>

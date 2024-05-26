@@ -23,6 +23,7 @@ body{
 input,select,textarea{
     outline: none;
     border: none;
+    color: var(--text-color);
     background-color: var(--components-background);
 }
 select{
@@ -61,6 +62,12 @@ a {
 .center *{
     margin: auto ;
 }
+.d_none{
+    display: none !important;
+}
+.pointer{
+    cursor: pointer;
+}
 .space__sm span span{
     display: inline-block;
     margin: 0 10px;
@@ -97,9 +104,19 @@ a {
 .text-align{
     text-align: center;
 }
-
+.font_12{
+    font-size: 12px;
+}
+.menu{
+    display:none;
+}
+.logout{
+    display: block;
+}
 /* Header section */
-
+.screen__saver{
+    display: block;
+}
 .navbar{
     width: 100%;
     display: flex;
@@ -140,6 +157,10 @@ a {
 .nav__links li.active{
     color: var(--text-color);
 }
+.expo .space__md.border__right,
+.expo .coin__info{
+    height: 100% !important;
+}
 .active__user{
     background-color: rgba(18, 23, 29, 1);
     border-radius: 8px;
@@ -163,8 +184,102 @@ a {
     padding: 5px 20px;
     border: var(--components-border);
 }
-.coin__header div{
-    padding: 10px 0;
+
+.coin__header--dropdown{
+    padding: 0 10px 10px 10px !important;
+    border-radius: 8px;
+    position: absolute;
+    width: 300px;
+    right: -100px;
+    top: 50px;
+    background-color: var(--background);
+    border-radius: 8px;
+    border: var(--border);
+    display: none;
+}
+.toggle__coins:hover .coin__header--dropdown{
+    display: block;
+}
+.toggle__coins:hover .toggle__coin--arrow{
+    transform: rotate(180deg);
+}
+.search__container{
+    border: var(--border);
+    border-radius: 8px;
+    padding: 6px 10px !important;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.search__container input{
+    width: 100%;
+    margin-left: 10px;
+    background-color: var(--background);
+}
+.coin__display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.coin__display--header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    
+}
+.coin__header--dropdown > div:first-of-type{
+    padding-top: 10px;
+}
+.coin__display:has(.coin__display--header) {
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 5px 0;
+}
+.coin__header--dropdown > div{
+    padding-bottom: 10px;
+}
+.list__coins{
+    max-height: 150px;
+    overflow-y: auto;
+}
+.overflow__coins{
+    overflow-x: auto;
+}
+.list__coins::-webkit-scrollbar {
+    display: none;
+}
+.list__coins {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.coin__display--header span.active{
+    color: var(--text-color);
+    border-radius: 100px;
+    background-color: var(--active-bg);
+    padding: 5px 10px;
+}
+.coin__display--header span{
+    cursor: pointer;
+}
+.coin__display:hover{
+    background-color: var(--components-background);
+    cursor: pointer;
+}
+.coin__display--data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.coin__display--data1 img{
+    max-width: 40px;
+}
+.coin__display--data1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+}
+.coin__header > div{
+    padding: 8px 0;
 }
 .coin__size{
     font-size: 22px;
@@ -231,6 +346,9 @@ a {
     place-content: center;
     font-size: 12px;
     text-align: center;
+}
+.data__header.sm{
+    display: none;
 }
 .chart__display{
     padding: 0 2px;
@@ -311,6 +429,15 @@ a {
     color: var(--text-color);
     font-weight: 500;
 }
+.buy__sell--toggle .muted.active.right{
+    padding: 10px 5px;
+}
+.buy__sell--header .right.active{
+    border: 1px solid rgba(37, 194, 110, 1) !important;
+}
+.buy__sell--header .left.active{
+    border: 1px solid rgba(255, 85, 74, 1) !important;
+}
 .buy__sell--input-section{
     border: var(--border);
     border-radius: 8px;
@@ -330,6 +457,7 @@ a {
 }
 .buy__sell--input-section select{
     color: var(--muted);
+    text-align: initial;
 }
 .buy__sell--input-section input::placeholder {
     color: var(--muted);
@@ -432,5 +560,53 @@ a {
     font-size: 14px;
     margin-top: 20px;
 }
+
+.breadcrumbs__menu{
+    background: var(--components-background);
+    max-width: 350px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    transition: all 0.5s ease;
+    z-index: 100;
+    padding: 20px 0;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    z-index: 10000;
+    border-left: var(--border);
+}
+.breadcrumbs__menu.display{
+    right: 0;
+    transition: all 0.5s ease;
+}
+.breadcrumbs__menu--links{
+    display:block;
+    padding: 20px;
+}
+.breadcrumbs__menu--links.active{
+    background: rgba(37, 42, 48, 1);
+}
+.breadcrumbs__menu img{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

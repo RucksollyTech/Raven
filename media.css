@@ -1,0 +1,133 @@
+@media (max-width:1180px) {
+    .coin__header.flex{
+        display: block;
+    }
+    .coin__header.flex .expo{
+        display: inline-block;
+    }
+    .coin__header.flex{
+        display: block;
+    }
+    .coin__header{
+        overflow-x: auto;
+    }
+    .coin__header .expos{
+        min-width: 820px;
+    }
+    .border__right:has(.coin__info--price){
+        border-right: none;
+    }
+    .overflow__coins::-webkit-scrollbar {
+        display: none;
+    }
+    .overflow__coins {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
+
+
+@media (max-width:900px) {
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    .logout{
+        display: none;
+    }
+    .active__user{
+        background-color: var(--background);
+        border-radius: 0;
+        padding: 0;
+        font-size: 12px;
+        width: inherit;
+    }
+    .screen__saver{
+        display: none;
+    }
+    .nav__links{
+        display: none;
+    }
+    .logo__container{
+        border-right: none;
+    }
+}
+@media (max-width:800px) {
+    .chart__content,
+    .chart__content--data{
+        display: block;
+        min-height: 350px;
+        border-top: none;
+    }
+    .chart__content--view{
+        min-height: 350px;
+        display: grid;
+        border-top: none;
+    }
+    .chart__content--view.hidden,
+    .chart__content--data.hidden,
+    .chart__content--data .data__header,
+    .buy__sell.hidden{
+        display: none;
+    }
+    .chart{
+        grid-template-columns: 1fr;
+        padding: 0;
+        background-color: var(--components-background);
+        padding-top: 15px;
+        border-top: var(--border);
+    }
+    .data__header.sm{
+        height: 40px;
+        margin: 0 10px;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .chart__content--view,
+    .chart__content--data{
+        margin-top: 10px;
+    }
+    .coin__header{
+        background-color: var(--components-background);
+        margin: 0;
+        margin-top: var(--gap);
+        margin-bottom: var(--gap);
+        border-radius: 0;
+        /* padding: 5px 20px; */
+        border: none;
+        border-top: var(--border);
+        border-bottom: var(--border);
+    }
+    .chart__content--view,
+    .open__orders,
+    .chart__content--data{
+        border-radius: 0;
+    }
+    
+}
+@media (max-width:500px) {
+    .navbar{
+        padding: 10px;
+    }
+    .logo__container .logo__name{
+        max-width: 60px;
+    }
+    .coin__info--price{
+        font-size: 16px;
+    }
+    .coin__size{
+        font-size: 16px;
+    }
+    .coin__header--img{
+        max-width: 40px;
+    }
+    .coin__header{
+        padding: 5px 10px;
+    }
+    .space__md span span{
+        margin: 0 15px;
+    }
+    .open__orders--header span{
+        font-size: 10px;
+    }
+}
